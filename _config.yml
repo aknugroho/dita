@@ -6,12 +6,13 @@ baseurl:            "/"
 url:                "https://dita.my.id"
 
 # Social Profiles
-twitter_username:   
 github_username:    nikeardita
 facebook_username:  eunikeardita
-linkedin_username:
-instagram_username: @eunike_ardita
+instagram_username: eunike_ardita
 youtube_username: Gerard Villanuava
+linkedin_username:
+twitter_username:
+
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
