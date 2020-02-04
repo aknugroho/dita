@@ -1,5 +1,5 @@
 title:              nikeardita blog
-email:              your-email@example.com
+email:              ardytaeunike@gmail.com
 description:        A Blog by Eunike
 author:             nikeardita
 baseurl:            "/"
@@ -10,7 +10,8 @@ twitter_username:
 github_username:    nikeardita
 facebook_username:  eunikeardita
 linkedin_username:
-instagram_username: eunike_ardita
+instagram_username: @eunike_ardita
+youtube_link: https://www.youtube.com/channel/UC_rK686n1S0IGjC0FZSoMzQ
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
