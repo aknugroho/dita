@@ -4,6 +4,7 @@ description:        A Blog by Eunike
 author:             Nikeardita
 baseurl:            "/"
 url:                "https://dita.my.id"
+permalink: none
 
 # Social Profiles
 github_username:    nikeardita
