@@ -37,7 +37,7 @@ layout: default
         <hr>
         
         <div class="page-category">
-          {% for tag in page.tags %}
+          {% for category in page.category %}
             <a href="{{site.baseurl}}/category#{{category}}" class="category">&#35; {{ category }}</a>
           {% endfor %}
         </div>
