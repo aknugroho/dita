@@ -10,7 +10,7 @@ background: '/img/bg_aboutme2.jpg'
   <h1>Category in Blog</h1>
   <ul class="category">
  <!-- Home Post List -->
-        {% for post in site.category limit : 1000 %}
+        {% for post in site.categories limit : 1000 %}
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
