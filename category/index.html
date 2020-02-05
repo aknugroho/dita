@@ -28,8 +28,8 @@ background: '/img/bg-post5.jpg'
 <hr>
 
 <div class="text-justify">
-  {% if site.categories[post.slug] %}
-    {% for post in site.categories[poat.slug] %}
+  {% if site.category[post.slug] %}
+    {% for post in site.category[poat.slug] %}
       {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% if forloop.first %}
         <h3 class="m-t-3 m-b-1">{{ post_year }}</h3>
