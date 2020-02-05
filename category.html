@@ -9,20 +9,30 @@ background: '/img/bg_aboutme2.jpg'
 <section class="blog-category">
   <h1>Category in Blog</h1>
   <ul class="category">
-<!--  cycles through category list and creates header row of all tags used in site with accompanying per-tag counts...-->
-  {% for this_word in category_words %}
-    <li ><a href="#{{ this_word | cgi_escape }}" class="category">{{ this_word }} <span>({{ site.category[this_word].size }})</span></a></li>
-  {% endfor %}
-  </ul>
-<!--cycles through tag list and creates subheader for each category name...-->
-  {% for this_word in category_words %}
-  <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
-<!--  lists all posts corresponding to specific category...-->
-    {% for post in site.category[this_word] %}{% if post.title != null %}
-    <div class="category-list">
-        <span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></span>
-        <small><span>| {{ post.date | date_to_string }}</span></small>
-    </div>
-    {% endif %}{% endfor %}
-  {% endfor %}
+ <!-- Home Post List -->
+        {% for post in site.category limit : 1000 %}
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+          </a>
+          <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+        </article>
+
+        <hr>
+
+        {% endfor %}
 </section>
