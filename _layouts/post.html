@@ -57,8 +57,10 @@ layout: default
         
         <div class="page-category">
             <p class="m-t-3 text-muted font-italic">
-    #<small>Posted{% if category_content %} in </small>{{ category_content }}<small>{% endif %}{{ tags_content }}</small>
-  Category:<a href="{{ site.baseurl }}/category#{{ page.category }}">{{ page.category }}</a>
+    <small>Posted{% if category_content %} in </small>{{ category_content }}<small>{% endif %}{{ tags_content }}</small>
+</p>
+<p>
+Category:<a href="{{ site.baseurl }}/category#{{ page.category }}">{{ page.category }}</a>
 Tag:{{ page.tag }}
 </p>
         </div>
