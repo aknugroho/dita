@@ -42,7 +42,7 @@ layout: default
          Category : <a href="{{ site.baseurl }}/blog/category.html#{{ page.category }}">{{ page.category }}</a>
          | Tag : 
            {% for tag in page.tags %}
-         , <a href="{{ site.baseurl }}/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
+         <a href="{{ site.baseurl }}/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
          {% endfor %}
          </p>
        </div>
