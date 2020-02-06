@@ -40,7 +40,7 @@ Here we generate all the tags.
 
 
 {% for tag in tags %}
-<h2 class="post-title"> id="{{ tag | slugify }}">{{ tag }}</h2>
+<h2 class="post-title" id="{{ tag | slugify }}">{{ tag }}</h2>
 <ul class="codinfox-category-list">
   {% for post in site.posts %}
   {% if post.tags contains tag %}
