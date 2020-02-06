@@ -40,8 +40,9 @@ layout: default
        <div class="page-category">
          <p>
          Category : <a href="{{ site.baseurl }}/blog/category.html#{{ page.category }}">{{ page.category }}</a>
-         {% for tag in page.tags %}
-         | Tag : <a href="{{ site.baseurl }}/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
+         | Tag : 
+           {% for tag in page.tags %}
+         , <a href="{{ site.baseurl }}/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
          {% endfor %}
          </p>
        </div>
