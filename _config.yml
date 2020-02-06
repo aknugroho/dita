@@ -22,6 +22,23 @@ discus-identifier: nikeardita # add your discus identifier
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
+# Navigation (2nd level links supported)
+nav:
+  Home:           
+    - '/'
+  Blog:           
+    - '/blog/'
+    - { Categories: '/blog/category/' }
+    - { Tags: '/blog/tag/' }
+  About:          
+    - '/about/'
+  Contact: 
+    - '/contact/'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tag/'
+category_page: '/blog/category/'
+
 # Build settings
 markdown:           kramdown
 paginate:         5
