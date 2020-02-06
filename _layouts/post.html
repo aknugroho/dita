@@ -39,8 +39,10 @@ layout: default
         
        <div class="page-category">
          <p>
-         Category:<a href="{{ site.baseurl }}/blog/category.html#{{ page.category }}">{{ page.category }}</a>
-         Tag:<a href="{{ site.baseurl }}/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
+         Category : <a href="{{ site.baseurl }}/blog/category.html#{{ page.category }}">{{ page.category }}</a>
+         {% for tag in post.tags %}
+         | Tag : <a href="{{ site.baseurl }}/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
+         {% endfor %}
          </p>
        </div>
         
