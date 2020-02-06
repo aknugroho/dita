@@ -43,7 +43,7 @@ layout: default
 
   {% if page.tags.size > 0 %}
     {% capture tags_content %} with <span class="icon-price-tag{% if post.tags.size > 1 %}s{% endif %}"></span>: {% endcapture %}
-    {% for post_tag in page.tags %}
+    {% for page_tag in page.tags %}
       {% assign tag = site.my_tags | where: "slug", page_tag %}
       {% if tag %}
         {% assign tag = tag[0] %}
@@ -60,7 +60,7 @@ layout: default
     <small>Posted{% if category_content %} in </small>{{ category_content }}<small>{% endif %}{{ tags_content }}</small>
 </p>
 <p>
-Category:<a href="{{ site.baseurl }}/category#{{ page.category }}">{{ page.category }}</a>
+Category:<a href="{{ category.url }}">{{ page.category }}</a>
 Tag:{{ page.tag }}
 </p>
         </div>
