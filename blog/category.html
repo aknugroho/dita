@@ -36,26 +36,20 @@ Here we generate all the categories.
 <br/>
 
 <div class="post-preview">
-<p>
-{% for ct in cats %}
-<a href="#{{ ct | slugify }}" class="codinfox-category-mark" style="color:#999;text-decoration: none;"><h3 class="post-subtitle">{{ ct }}</h3> </a> &nbsp;&nbsp;
-{% endfor %}
-<a href="#no-category" class="codinfox-category-mark" style="color:#999;text-decoration: none;"><h3 class="post-subtitle"> No Category</h3>  </a> &nbsp;&nbsp;
-</p>
 
 {% for ct in cats %}
-<h2 id="{{ ct | slugify }}">{{ ct }}</h2>
+<h2 class="post-title" id="{{ ct | slugify }}">{{ ct }}</h2>
 <ul class="codinfox-category-list">
   {% for post in site.posts %}
   {% if post.category contains ct %}
   <li>
-    <h3>
+    <h3 class="post-subtitle">
       <a href="{{ post.url }}">
-        <h2 class="post-title">{{ post.title }}</h2>
+        {{ post.title }}
         <small>{{ post.date | date_to_string }}</small>
       </a>
       {% for tag in post.tags %}
-      <a class="codinfox-tag-mark" href="/blog/tag.html#{{ tag | slugify }}"><h3 class="post-subtitle">{{ tag }}</h3></a>
+      <a class="btn btn-primary float-left" href="/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
     </h3>
   </li>
@@ -64,18 +58,18 @@ Here we generate all the categories.
 </ul>
 {% endfor %}
 
-<h2 id="no-category">No Category</h2>
+<h2 class="post-title" id="no-category">No Category</h2>
 <ul class="codinfox-category-list">
   {% for post in site.posts %}
   {% unless post.category %}
   <li>
-    <h3>
+    <h3 class="post-subtitle">
       <a href="{{ post.url }}">
-        <h2 class="post-title">{{ post.title }}</h2>
+        {{ post.title }}
         <small>{{ post.date | date_to_string }}</small>
       </a>
       {% for tag in post.tags %}
-      <a class="codinfox-tag-mark" href="/blog/tag.html#{{ tag | slugify }}"><h3 class="post-subtitle">{{ tag }}</h3></a>
+      <a class="btn btn-primary float-left" href="/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
     </h3>
   </li>
