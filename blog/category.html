@@ -49,7 +49,7 @@ Here we generate all the categories.
         <small>{{ post.date | date_to_string }}</small>
       </a>
       {% for tag in post.tags %}
-      <a href="/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
+      <a href="/blog/tag.html#{{ tag | slugify }}"><p class="post-meta">{{ tag }}</p></a>
       {% endfor %}
     </h3>
   </li>
@@ -69,7 +69,7 @@ Here we generate all the categories.
         <small>{{ post.date | date_to_string }}</small>
       </a>
       {% for tag in post.tags %}
-      <a href="/blog/tag.html#{{ tag | slugify }}">{{ tag }}</a>
+      <a href="/blog/tag.html#{{ tag | slugify }}"><p class="post-meta">{{ tag }}</p></a>
       {% endfor %}
     </h3>
   </li>
