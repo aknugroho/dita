@@ -87,7 +87,7 @@ Here we generate all the categories.
         
         <div class="clearfix">
           {% for ct in cats %}
-          <a class="btn btn-primary float-right" href="#{{ ct | slugify }}">{{ ct }}&rarr;</a>
+          <a class="btn btn-primary float-right" href="{{"/blog" | relative_url }}/category#{{ ct | slugify }}">{{ ct }}&rarr;</a>
           {% endfor %}
           <a class="btn btn-primary float-right" href="{{"/blog" | relative_url }}">View All Posts &rarr;</a>
         </div>
