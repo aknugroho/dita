@@ -5,7 +5,7 @@ author:             Nikeardita
 baseurl:            "/"
 url:                "https://dita.my.id"
 permalink: /:categories/:title:output_ext
-relative_permalinks: true
+
 
 # Social Profiles
 github_username:    nikeardita
